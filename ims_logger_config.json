@@ -1,0 +1,35 @@
+{
+    "version":1,
+    "loggers":{
+        "imsServer":{
+            "handlers":["fileHandler"],
+            "level":"DEBUG"
+        },
+        "rawMsg":{
+            "handlers":["rawMsgFileHandler"],
+            "level":"DEBUG"
+        }
+    },
+    "handlers":{
+                "fileHandler":{
+                    "class":"logging.FileHandler",
+                    "formatter":"myFormatter",
+                    "filename":"ims_server_log.log",
+                    "mode":"w"
+                },
+                "rawMsgFileHandler":{
+                    "class":"logging.FileHandler",
+                    "formatter":"rawMsgFileFormatter",
+                    "filename":"raw_message.log",
+                    "mode":"w"
+                }
+    },
+    "formatters":{
+        "myFormatter":{
+            "format":"%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+        },
+        "rawMsgFileFormatter":{
+            "format":"%(asctime)s %(message)s"
+        }
+    }
+}

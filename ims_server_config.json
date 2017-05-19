@@ -1,0 +1,13 @@
+{
+  "version":1,
+  "server_ipv4":[
+    "localhost"
+  ],
+  "server_ipv6":[
+      "::1"
+  ],
+  "port":[
+    5060,
+    5061
+  ]
+}
